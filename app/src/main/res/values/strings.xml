@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">便携式动车组车底红外检测软件</string>
+    <!-- LoadingActivity-->
+    <string name="company_name">北京主导时代科技有限公司</string>
+    <!-- LoginActivity-->
+    <string name="login">点击登录</string>
+    <string name="forget_password">忘记密码</string>
+    <!-- HomeActivity-->
+    <!-- after take picture dialog-->
+    <string name="recorder">检测人员：</string>
+    <string name="record_wheel_num">检测部件名称：</string>
+    <string name="ok">确定</string>
+    <string name="back">返回</string>
+    <!-- create wifi dialog-->
+    <string name="create_wifi">Wifi连接</string>
+    <string name="wifi_name">Wifi名称：</string>
+    <string name="wifi_password">Wifi密码：</string>
+    <!-- exit system-->
+    <string name="exit_system">确定退出该系统吗？</string>
+    <string name="continue_go">继续</string>
+    <!-- setting-->
+    <string name="setting">设置</string>
+    <string name="warn_value">报警值：</string>
+    <string name="warn_voice">报警声音：</string>
+    <string name="warn_vibration">报警震动提示：</string>
+    <!-- GalleryActivity-->
+    <string name="done">完成</string>
+    <string name="worklog">工作日志</string>
+    <string name="alarm_gallery">报警图库</string>
+    <string name="cancel">取消</string>
+    <string name="connect_pc">已连接上电脑\n正在等待传输文件</string>
+    <string name="turn_back">返回</string>
+</resources>

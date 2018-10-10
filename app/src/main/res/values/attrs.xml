@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DrawTextureView">
+        <attr name="viewModel">
+            <enum name="VL" value="0" />
+            <enum name="IR" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="DrawView">
+        <attr name="viewType">
+            <enum name="VL" value="0" />
+            <enum name="IR" value="1" />
+        </attr>
+        <attr name="drawType">
+            <enum name="CLEAN" value="0" />
+            <enum name="POINT" value="1" />
+            <enum name="RECTANGLE" value="2" />
+        </attr>
+        <attr name="shapeNum" format="integer" />
+        <attr name="nearSize" format="dimension|integer" />
+    </declare-styleable>
+
+    <declare-styleable name="MyTextureView">
+        <attr name="viewTypeTexture">
+            <enum name="VL" value="0" />
+            <enum name="IR" value="1" />
+        </attr>
+        <attr name="drawTypeTexture">
+            <enum name="CLEAN" value="0" />
+            <enum name="POINT" value="1" />
+            <enum name="RECTANGLE" value="2" />
+        </attr>
+        <attr name="shapeNumTexture" format="integer" />
+        <attr name="nearSizeTexture" format="dimension|integer" />
+    </declare-styleable>
+</resources>

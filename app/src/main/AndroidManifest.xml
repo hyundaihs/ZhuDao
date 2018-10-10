@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hzncc.zhudao">
+    <!--android:sharedUserId="android.uid.system">-->
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 往sdcard中读写数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 全局性对话框权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <!-- 录音录像权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!--<uses-permission  android:name="android.permission.SHUTDOWN"/>-->
+    <!--<uses-permission android:name="android.permission.CONNECTIVITY_INTERNAL" />-->
+
+    <!--去掉应用外跳转延迟-->
+    <!--<uses-permission android:name="android.permission.STOP_APP_SWITCHES" />-->
+    <!--开机启动权限-->
+    <!--<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>-->
+
+    <application
+        android:name=".ZDApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.HomeActivity"
+            android:screenOrientation="landscape">
+            <intent-filter android:priority="800">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.MONKEY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.GalleryActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.AlarmDetailActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.WorkLogActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.MemoryActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.CleanActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.ShareActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.GroupEditActivity"
+            android:screenOrientation="landscape" />
+
+
+        <receiver android:name=".receivers.USBBroadcastReceiver">
+            <intent-filter>
+                <!--<action android:name="android.hardware.usb.action.USB_STATE" />-->
+                <!--<action android:name="android.intent.action.MEDIA_MOUNTED" />-->
+                <!--<action android:name="android.intent.action.MEDIA_UNMOUNTED" />-->
+                <action android:name="android.intent.action.MEDIA_SHARED" />
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+                <!--<action android:name="android.intent.action.MEDIA_BAD_REMOVAL" />-->
+                <!--<action android:name="android.intent.action.MEDIA_BUTTON" />-->
+                <!--<action android:name="android.intent.action.MEDIA_CHECKING" />-->
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+                <!--<action android:name="android.intent.action.MEDIA_NOFS" />-->
+                <!--<action android:name="android.intent.action.MEDIA_REMOVED" />-->
+                <action android:name="android.intent.action.MEDIA_SCANNER_FINISHED" />
+                <!--<action android:name="android.intent.action.MEDIA_SCANNER_SCAN_FILE" />-->
+                <!--<action android:name="android.intent.action.MEDIA_SCANNER_STARTED" />-->
+                <!--<action android:name="android.intent.action.MEDIA_UNMOUNTABLE" />-->
+
+                <!--<action android:name="android.intent.action.BATTERY_CHANGED" />-->
+                <!--<action android:name="android.intent.action.BATTERY_LOW" />-->
+                <action android:name="com.hzncc.action.battery_full" />
+                <action android:name="com.hzncc.action.battery_low" />
+                <action android:name="com.hzncc.action.os_shutdown" />
+                <!--开机动作-->
+                <!--<action android:name="android.intent.action.BOOT_COMPLETED" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.MyService" />
+
+    </application>
+
+</manifest>

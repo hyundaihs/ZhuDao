@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ZhuDao.iml" filepath="$PROJECT_DIR$/ZhuDao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/broadcastreceiverdemo/broadcastreceiverdemo.iml" filepath="$PROJECT_DIR$/broadcastreceiverdemo/broadcastreceiverdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/excel2sqlite/excel2sqlite.iml" filepath="$PROJECT_DIR$/excel2sqlite/excel2sqlite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/observerdemo/observerdemo.iml" filepath="$PROJECT_DIR$/observerdemo/observerdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhudaoclient/zhudaoclient.iml" filepath="$PROJECT_DIR$/zhudaoclient/zhudaoclient.iml" />
+    </modules>
+  </component>
+</project>

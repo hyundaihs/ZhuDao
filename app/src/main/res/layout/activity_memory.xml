@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/activity_memory_title_bg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/memory_title_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.hzncc.zhudao.widget.BatteryView
+        android:id="@+id/activity_memory_battery"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_memory_title_bg"
+        app:layout_constraintTop_toTopOf="@+id/activity_memory_title_bg" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/activity_memory_user"-->
+        <!--style="@style/activity_home_title_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:text="操作员：张三"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/activity_memory_date"-->
+        <!--app:layout_constraintRight_toLeftOf="@+id/activity_memory_date"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/activity_memory_date" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/activity_memory_date"-->
+        <!--style="@style/activity_home_title_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_constraintLeft_toLeftOf="@+id/activity_memory_title_bg"-->
+        <!--app:layout_constraintRight_toRightOf="@+id/activity_memory_title_bg"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/activity_memory_title_bg" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/activity_memory_env_temp"-->
+        <!--style="@style/activity_home_title_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:text="温度：24℃"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/activity_memory_date"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/activity_memory_date"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/activity_memory_date" />-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:contentDescription="@null"
+        android:src="@mipmap/phone"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_memory_progress"
+        app:layout_constraintRight_toLeftOf="@+id/activity_memory_progress"
+        app:layout_constraintTop_toTopOf="@+id/activity_memory_progress" />
+
+    <com.hzncc.zhudao.widget.MyProgressBar
+        android:id="@+id/activity_memory_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_memory_title_bg"
+        app:layout_constraintRight_toRightOf="@+id/activity_memory_title_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_memory_title_bg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@null"
+        android:src="@mipmap/pc"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_memory_progress"
+        app:layout_constraintLeft_toRightOf="@+id/activity_memory_progress"
+        app:layout_constraintTop_toTopOf="@+id/activity_memory_progress" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_memory_title_bg" />
+
+    <TextView
+        android:id="@+id/activity_memory_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/connect_pc"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_memory_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_memory_title_bg" />
+
+    <Button
+        android:id="@+id/activity_memory_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/white_button_bg"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:text="@string/turn_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/activity_memory_connect"
+        app:layout_constraintTop_toBottomOf="@+id/activity_memory_hint" />
+
+    <Button
+        android:id="@+id/activity_memory_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/white_button_bg"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:text="连接电脑"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/activity_memory_back"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_memory_hint" />
+</android.support.constraint.ConstraintLayout>

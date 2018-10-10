@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideLine_v_midd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/alarm_detail_item_vl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintDimensionRatio="4:3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/guideLine_v_midd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/alarm_detail_item_ir"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintDimensionRatio="4:3"
+        app:layout_constraintLeft_toLeftOf="@+id/guideLine_v_midd"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/alarm_detail_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/alarm_detail_item_centemp_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/alarm_detail_item_wheel"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_detail_item_ir" />
+
+    <TextView
+        android:id="@+id/alarm_detail_item_wheel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/alarm_detail_item_centemp_title"
+        app:layout_constraintLeft_toRightOf="@+id/alarm_detail_item_time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_detail_item_ir" />
+
+    <TextView
+        android:id="@+id/alarm_detail_item_centemp_title"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circle_white_bg"
+        android:gravity="center"
+        android:text="中心"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/alarm_detail_item_centemp"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_detail_item_time" />
+
+    <TextView
+        android:id="@+id/alarm_detail_item_centemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/alarm_detail_item_temp1_title"
+        app:layout_constraintLeft_toRightOf="@+id/alarm_detail_item_centemp_title"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_detail_item_time" />
+
+    <TextView
+        android:id="@+id/alarm_detail_item_temp1_title"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circle_red_bg"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/alarm_detail_item_centemp"
+        app:layout_constraintRight_toLeftOf="@+id/alarm_detail_item_temp1"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_detail_item_time" />
+
+    <TextView
+        android:id="@+id/alarm_detail_item_temp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintRight_toLeftOf="@+id/alarm_detail_item_temp2_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/alarm_detail_item_temp1_title"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_detail_item_time" />
+
+    <TextView
+        android:id="@+id/alarm_detail_item_temp2_title"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circle_green_bg"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/alarm_detail_item_temp1"
+        app:layout_constraintRight_toLeftOf="@+id/alarm_detail_item_temp2"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_detail_item_time" />
+
+    <TextView
+        android:id="@+id/alarm_detail_item_temp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/alarm_detail_item_temp3_title"
+        app:layout_constraintLeft_toRightOf="@+id/alarm_detail_item_temp2_title"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_detail_item_time" />
+
+    <TextView
+        android:id="@+id/alarm_detail_item_temp3_title"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circle_blue_bg"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/alarm_detail_item_temp2"
+        app:layout_constraintRight_toLeftOf="@+id/alarm_detail_item_temp3"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_detail_item_time" />
+
+    <TextView
+        android:id="@+id/alarm_detail_item_temp3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:text="42℃"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/alarm_detail_item_temp3_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_detail_item_time" />
+
+</android.support.constraint.ConstraintLayout>

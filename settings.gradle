@@ -1,0 +1,1 @@
+include ':app', ':broadcastreceiverdemo', ':observerdemo', ':zhudaoclient', ':excel2sqlite'

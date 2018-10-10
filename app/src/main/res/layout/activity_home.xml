@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideLine_v_midd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/activity_home_title_bg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/home_title_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/activity_home_left_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="@null"
+        android:src="@mipmap/home_left_menu"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_home_title_bg"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_home_title_bg"
+        app:layout_constraintTop_toTopOf="@+id/activity_home_title_bg" />
+
+    <com.hzncc.zhudao.widget.BatteryView
+        android:id="@+id/activity_home_battery"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_home_title_bg"
+        app:layout_constraintLeft_toRightOf="@+id/activity_home_left_menu"
+        app:layout_constraintTop_toTopOf="@+id/activity_home_title_bg" />
+
+    <TextView
+        android:id="@+id/activity_home_date"
+        style="@style/activity_home_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/activity_home_color_line"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_home_title_bg"
+        app:layout_constraintRight_toRightOf="@+id/activity_home_title_bg"
+        app:layout_constraintTop_toTopOf="@+id/activity_home_title_bg" />
+
+    <TextView
+        android:id="@+id/activity_home_low_temp"
+        style="@style/activity_home_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_home_color_line"
+        app:layout_constraintRight_toLeftOf="@+id/activity_home_color_line"
+        app:layout_constraintTop_toTopOf="@+id/activity_home_color_line" />
+
+    <ImageView
+        android:id="@+id/activity_home_color_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@mipmap/palette1"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_home_title_bg"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_home_title_bg"
+        app:layout_constraintRight_toRightOf="@+id/activity_home_title_bg"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_date" />
+
+    <TextView
+        android:id="@+id/activity_home_high_temp"
+        style="@style/activity_home_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_home_color_line"
+        app:layout_constraintLeft_toRightOf="@+id/activity_home_color_line"
+        app:layout_constraintTop_toTopOf="@+id/activity_home_color_line" />
+
+    <ImageButton
+        android:id="@+id/activity_home_right_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="@null"
+        android:src="@mipmap/home_right_menu"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_home_title_bg"
+        app:layout_constraintRight_toRightOf="@+id/activity_home_title_bg"
+        app:layout_constraintTop_toTopOf="@+id/activity_home_title_bg" />
+
+    <RelativeLayout
+        android:id="@+id/activity_home_left_draw"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4:3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideLine_v_midd"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_title_bg">
+
+        <!--<com.hzncc.zhudao.drawView.MyTextureView xmlns:draw="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/activity_home_vl_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--draw:drawType="RECTANGLE"-->
+        <!--draw:shapeNum="3"-->
+        <!--draw:viewType="VL" />-->
+        <com.hzncc.zhudao.drawView.DrawTextureView xmlns:draw="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/activity_home_vl_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            draw:viewModel="VL" />
+
+        <com.hzncc.zhudao.drawView.DrawView xmlns:draw="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/activity_home_vl_Drawview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            draw:drawType="RECTANGLE"
+            draw:shapeNum="3"
+            draw:viewType="VL" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/activity_home_right_draw"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4:3"
+        app:layout_constraintLeft_toRightOf="@+id/guideLine_v_midd"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_title_bg">
+
+        <!--<com.hzncc.zhudao.drawView.MyTextureView xmlns:draw="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/activity_home_ir_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--draw:drawType="RECTANGLE"-->
+        <!--draw:shapeNum="3"-->
+        <!--draw:viewType="IR" />-->
+        <com.hzncc.zhudao.drawView.DrawTextureView xmlns:draw="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/activity_home_ir_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            draw:viewModel="IR" />
+
+        <com.hzncc.zhudao.drawView.DrawView xmlns:draw="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/activity_home_ir_Drawview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            draw:drawType="RECTANGLE"
+            draw:shapeNum="3"
+            draw:viewType="IR" />
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/activity_home_switch_draw_erase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:button="@drawable/home_switch_draw_erase_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_left_draw" />
+
+    <TextView
+        android:id="@+id/activity_home_cen_temp"
+        style="@style/activity_home_circle_temp_text"
+        android:background="@drawable/circle_white_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/activity_home_switch_draw_erase"
+        app:layout_constraintRight_toLeftOf="@+id/activity_home_red_temp"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_left_draw" />
+
+    <TextView
+        android:id="@+id/activity_home_red_temp"
+        style="@style/activity_home_circle_temp_text"
+        android:background="@drawable/circle_red_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/activity_home_cen_temp"
+        app:layout_constraintRight_toLeftOf="@+id/activity_home_green_temp"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_left_draw" />
+
+    <TextView
+        android:id="@+id/activity_home_green_temp"
+        style="@style/activity_home_circle_temp_text"
+        android:background="@drawable/circle_green_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/activity_home_red_temp"
+        app:layout_constraintRight_toLeftOf="@+id/activity_home_blue_temp"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_left_draw" />
+
+    <TextView
+        android:id="@+id/activity_home_blue_temp"
+        style="@style/activity_home_circle_temp_text"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/circle_blue_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/activity_home_green_temp"
+        app:layout_constraintRight_toLeftOf="@+id/guideLine_v_midd"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_left_draw" />
+
+    <ImageButton
+        android:id="@+id/activity_home_takepic_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="@null"
+        android:src="@drawable/home_circle_pic_btn"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_left_draw" />
+
+    <CheckBox
+        android:id="@+id/activity_home_video_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_video_btn"
+        android:button="@null"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_left_draw" />
+
+    <CheckBox
+        android:id="@+id/activity_home_switch_pic_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/home_switch_pic_video_btn"
+        android:button="@null"
+        android:checked="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/guideLine_v_midd"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_left_draw" />
+
+
+    <CheckBox
+        android:id="@+id/activity_home_switch_flash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/home_switch_flash_btn"
+        android:button="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/activity_home_gallery"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_left_draw" />
+
+    <ImageButton
+        android:id="@+id/activity_home_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="@null"
+        android:padding="10dp"
+        android:src="@mipmap/home_gallery_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_left_draw" />
+</android.support.constraint.ConstraintLayout>

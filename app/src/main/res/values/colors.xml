@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!-- LoginActivity-->
+    <color name="button_bg">#DF594D</color>
+    <!-- HomeActivity-->
+    <color name="circle_temp_white_bg">#FFFFFF</color>
+    <color name="circle_temp_red_bg">#FF6464</color>
+    <color name="circle_temp_green_bg">#32CD0A</color>
+    <color name="circle_temp_blue_bg">#4182FF</color>
+
+    <!-- recycleViewPager-->
+    <color name="item_pressed_color">#CCCCCC</color>
+    <color name="item_activated_color">#77CEEE</color>
+
+    <!-- 透明选中-->
+    <color name="seleted">#50FFFFFF</color>
+    <color name="seleted2">#50000000</color>
+
+</resources>
